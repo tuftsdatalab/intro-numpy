@@ -2,12 +2,13 @@
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tuftsdatalab/intro-numpy/blob/main/intro-numpy.ipynb){:target="_blank"}&nbsp;
 [![Download Notebook](https://tuftsdatalab.github.io/badges/jupyter.svg)](https://cdn.jsdelivr.net/gh/tuftsdatalab/intro-numpy@main/intro-numpy.ipynb)&nbsp;
 [![View on Github](https://tuftsdatalab.github.io/badges/github.svg)](https://github.com/tuftsdatalab/intro-numpy){:target="_blank"}&nbsp;
-![last updated](https://img.shields.io/github/last-commit/tuftsdatalab/intro-numpy?label=last%20updated)&nbsp;
-[![datalab.tufts.edu](https://tuftsdatalab.github.io/badges/datalab.svg)](https://sites.tufts.edu/datalab){:target="_blank"}&nbsp;
-[![@TuftsDataLab](https://tuftsdatalab.github.io/badges/twitter.svg)](https://twitter.com/intent/follow?screen_name=tuftsdatalab){:target="_blank"}
+![last updated](https://img.shields.io/github/last-commit/tuftsdatalab/intro-numpy?label=last%20updated)
 
 **A Tufts University Data Lab Workshop**\
 Written by Uku-Kaspar Uustalu
+
+[![datalab.tufts.edu](https://tuftsdatalab.github.io/badges/datalab.svg)](https://sites.tufts.edu/datalab){:target="_blank"}&nbsp;
+[![@TuftsDataLab](https://tuftsdatalab.github.io/badges/twitter.svg)](https://twitter.com/intent/follow?screen_name=tuftsdatalab){:target="_blank"}
 
 Python resources: [go.tufts.edu/python](https://sites.tufts.edu/datalab/python/){:target="_blank"}\
 Questions: <datalab-support@elist.tufts.edu>\
