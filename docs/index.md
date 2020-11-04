@@ -61,7 +61,7 @@ Follow the instructions below to launch the workshop notebook in the [Google Col
 
 The following assumes that you have [Anaconda](https://www.anaconda.com/products/individual){:target="_blank"} installed on your computer along with [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/){:target="_blank"}, [NumPy](https://numpy.org/){:target="_blank"}, and [Matplotlib](https://matplotlib.org/){:target="_blank"}. These packages are all included in Anaconda by default, so there is no need to individually install them if you have an unmodified Anaconda installation.
 
-If you have not done so already, [install Anaconda]((https://docs.anaconda.com/anaconda/install/){:target="_blank"}) on your computer. Then follow the instructions below to run the workshop notebook in a locally hosted JupyterLab environment.
+Anaconda installation instructions: [docs.anaconda.com/anaconda/install](https://docs.anaconda.com/anaconda/install/){:target="_blank"}
 
 1. Click on the [**Download Notebook**](https://cdn.jsdelivr.net/gh/tuftsdatalab/intro-python@master/intro-python.ipynb) button above to download the workshop notebook. It is recommended you create a designated folder for this workshop and move the notebook there.
 2. Launch JupyterLab either from the **command line** or via **Anaconda Navigator**.
