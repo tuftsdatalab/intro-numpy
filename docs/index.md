@@ -18,7 +18,7 @@ Workshop slides: [tufts.box.com/v/numpy-slides](https://tufts.box.com/v/numpy-sl
 Live offerings: [go.tufts.edu/workshops](https://sites.tufts.edu/datalab/workshops/){:target="_blank"}
 
 ---
-This interactive workshop serves as an introduction to scientific computing in Python and demonstrates how to work with matrices and multidimensional arrays using the popular [NumPy](https://numpy.org/){:target="_blank"} library. It also introduces plotting with [Matplotlib](https://matplotlib.org/){:target="_blank"} and outlines some key differences between NumPy, MATLAB, C/C++. and Fortran. The workshop is best suited for those with some previous experience in Python programming and scientific computing.
+This interactive workshop serves as an introduction to scientific computing in Python and demonstrates how to work with matrices and multidimensional arrays using the popular [NumPy](https://numpy.org/){:target="_blank"} library. It also introduces plotting with [Matplotlib](https://matplotlib.org/){:target="_blank"} and outlines some key differences between NumPy, MATLAB, C/C++. and Fortran. The workshop is best suited for those with some previous Python experience.
 
 Although intended for use in a live instructor-guided session, the interactive workshop notebook is well-commented and fully suitable for self-guided study. Please check the [Data Lab workshop schedule](https://sites.tufts.edu/datalab/workshops/){:target="_blank"} for upcoming live offerings of this workshop.
 
