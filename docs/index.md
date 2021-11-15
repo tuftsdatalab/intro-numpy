@@ -1,80 +1,123 @@
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tuftsdatalab/intro-numpy/main?urlpath=lab/tree/intro-numpy.ipynb){:target="_blank"}&nbsp;
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tuftsdatalab/intro-numpy/blob/main/intro-numpy.ipynb){:target="_blank"}&nbsp;
-[![Download Notebook](https://tuftsdatalab.github.io/badges/jupyter.svg)](https://cdn.jsdelivr.net/gh/tuftsdatalab/intro-numpy@main/intro-numpy.ipynb)&nbsp;
-[![View on Github](https://tuftsdatalab.github.io/badges/github.svg)](https://github.com/tuftsdatalab/intro-numpy){:target="_blank"}&nbsp;
-![last updated](https://img.shields.io/github/last-commit/tuftsdatalab/intro-numpy?label=last%20updated)
+---
+binder_popup: "[binder-link]{:target='_blank'}"
+binder_button: "[![Launch Binder](https://mybinder.org/badge_logo.svg)][binder-link]{:target='_blank'}"
+colab_popup: "[colab-link]{:target='_blank'}"
+colab_button: "[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)][colab-link]{:target='_blank'}"
+notebook_button: "[![Download Notebook](../badges/jupyter.svg)][notebook-link]"
+github_button: "[![View on Github](../badges/github.svg)][repo-link]"
+zipball_button: "[![Download Zip](../badges/zip.svg)][zipball-link]"
+tarball_button: "[![Download TarGz](../badges/tgz.svg)][tarball-link]"
+---
+
+{{ page.binder_button }}&nbsp;
+{{ page.colab_button }}&nbsp;
+{{ page.notebook_button }}&nbsp;
+{{ page.github_button }}&nbsp;
+{{ page.zipball_button }}&nbsp;
+{{ page.tarball_button }}&nbsp;
+![last updated][last-updated-badge]
 
 **A Tufts University Data Lab Workshop**\
-Written by Uku-Kaspar Uustalu
+Written by {{ site.author }}
 
-[![datalab.tufts.edu](https://tuftsdatalab.github.io/badges/datalab.svg)](https://sites.tufts.edu/datalab){:target="_blank"}&nbsp;
-[![@TuftsDataLab](https://tuftsdatalab.github.io/badges/twitter.svg)](https://twitter.com/intent/follow?screen_name=tuftsdatalab){:target="_blank"}
+[![datalab.tufts.edu](../badges/datalab.svg)](https://sites.tufts.edu/datalab)&nbsp;
+[![@TuftsDataLab](../badges/twitter.svg)](https://twitter.com/intent/follow?screen_name=tuftsdatalab)
 
-Python resources: [go.tufts.edu/python](https://sites.tufts.edu/datalab/python/){:target="_blank"}\
-Questions: <datalab-support@elist.tufts.edu>\
-Feedback: <uku-kaspar.uustalu@tufts.edu>
-
-Workshop slides: [tufts.box.com/v/numpy-slides](https://tufts.box.com/v/numpy-slides){:target="_blank"}\
-Live offerings: [go.tufts.edu/workshops](https://sites.tufts.edu/datalab/workshops/){:target="_blank"}
+Slides: [tufts.box.com/v/{{ site.slides }}](https://tufts.box.com/v/{{ site.slides }})\
+Live offerings: [go.tufts.edu/workshops](https://go.tufts.edu/workshops)\
+Contact: <datalab-support@elist.tufts.edu>
 
 ---
-This interactive workshop serves as an introduction to scientific computing in Python and demonstrates how to work with matrices and multidimensional arrays using the popular [NumPy](https://numpy.org/){:target="_blank"} library. It also introduces plotting with [Matplotlib](https://matplotlib.org/){:target="_blank"} and outlines some key differences between NumPy, MATLAB, C/C++. and Fortran. The workshop is best suited for those with some previous Python experience.
+## Table of Contents {#toc}
 
-Although intended for use in a live instructor-guided session, the interactive workshop notebook is well-commented and fully suitable for self-guided study. Please check the [Data Lab workshop schedule](https://sites.tufts.edu/datalab/workshops/){:target="_blank"} for upcoming live offerings of this workshop.
-
----
-## Running the Workshop Notebook
-
-The workshop notebook can be run in a cloud-computing environment or using a local [Anaconda](https://www.anaconda.com/products/individual){:target="_blank"} installation. Please select the most suitable option for you.
-
-- Use a cloud-computing environment *(does not require the installation of additional software)*
-    - [Virtual JupyterLab interface via **Binder**](#binder) *(reccomneded)*
-    - [Google Colab](#colab)
-- [Run the notebook locally on your computer](#local) *(requires an Anaconda installation)*
+- [Workshop Overview](#overview)
+- [Running the Workshop Notebook using a Virtual JupyterLab Instance (Recommended)](#binder)
+- [Running the Workshop Notebook using Google Colab](#colab)
+- [Running the Workshop Notebook using a Local Anaconda Installation](#anaconda)
+- [Running the Workshop Notebook using a Local Mambaforge Installation](#mambaforge)
 
 ---
-## Using Binder (virtual JupyterLab) to Run the Notebook {#binder}
-[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/tuftsdatalab/intro-numpy/main?urlpath=lab/tree/intro-numpy.ipynb){:target="_blank"}
+## Workshop Overview {#overview}
 
-Follow the instructions below to launch the notebook in an online version of the [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/){:target="_blank"} interface pre-configured for this workshop.
+This hands-on interactive workshop introduces you to scientific computing in Python and demonstrates how to work with matrices and multidimensional arrays using the popular NumPy library. The workshop is intended for those with some previous Python experience and draws comparisons between NumPy and alternatives like MATLAB, C/C++, and Fortran. The workshop notebook is suitable for self-guided study and covers the following:
 
-1. Click on the [**Launch Binder**](https://mybinder.org/v2/gh/tuftsdatalab/intro-numpy/main?urlpath=lab/tree/intro-numpy.ipynb){:target="_blank"} button above.
+- **Importing** Python **packages** and common **aliases**
+- The NumPy **`numpy.ndarray`** a.k.a. **`np.array`** data structure
+- Different ways of **creating**, **indexing**, and **slicing** NumPy arrays
+- **Broadcasting** and using mathematical operators with `np.array`
+- **Universal** functions and **aggregation** functions
+- **Iterating** and **mapping** over elements in NumPy arrays
+- ***Row-major*** vs ***column-major*** order and array **flattening**
+- **Shape manipulation** and the difference between ***copies*** and ***views***
+- Various options for **importing** and **exporting** NumPy arrays
+- Tweaking the textual representation of numbers using **format strings**
+- Reading files with Python using **`with`** and **`open()`**
+- Quick overview of **creating** and **styling plots** with Matplotlib
+- Creating a figure with multiple **subplots** in Matplotlib
+
+The notebook is designed to be run in a pre-configured cloud-computing environment either via [Binder](#binder) or [Google Colab](#colab) and does not require the installation of any software. Use of [Binder](#binder) is recommended as it provides a JupyterLab interface and allows for an experience similar to using a local installation. It is also possible to run the workshop notebook using a local [Anaconda](#anaconda) or [Mambaforge](#mambaforge) installation. Instructions on how to install Anaconda or Mambaforge are available here: [go.tufts.edu/installingPython](https://go.tufts.edu/installingPython)
+
+---
+## Running the Workshop Notebook using a Virtual JupyterLab Instance (Recommended) {#binder}
+
+{{ page.binder_button }}
+
+1. Click on the [**Launch Binder**]{{ page.binder_popup }} button above.
 2. A Binder instance will launch in a new tab with the message *Starting Repository*.
-3. Wait patiently and do not close the Binder tab.
-4. After a few minutes, the notebook will launch in a JupyterLab instance.
+3. Wait patiently and do not close the Binder tab. After a few minutes, a **JupyterLab** instance will launch.
+4. If the workshop notebook does not automatically open, *double-click* on `{{ site.file }}` in the file browser on the left.
 
 ---
-## Using Google Colab to Run the Notebook {#colab}
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tuftsdatalab/intro-numpy/blob/main/intro-numpy.ipynb){:target="_blank"}
+## Running the Workshop Notebook using Google Colab {#colab}
 
-Follow the instructions below to launch the workshop notebook in the [Google Colab](https://colab.research.google.com/){:target="_blank"} interactive Python notebook environment. *Note that a Google account is required to run notebooks in Google Colab.*
+{{ page.colab_button }}
 
-1. Click on the [**Open in Colab**](https://colab.research.google.com/github/tuftsdatalab/intro-numpy/blob/main/intro-numpy.ipynb){:target="_blank"} button above. The Google Colab interface will open in a new tab.
-2. If you are not already signed into your Google account, click on *Sign In* in the upper-right corner and sign in with your Google credentials. **You must be signed in with a Google account to be able to run notebooks in Google Colab.**
-3. *Optional:* If you want to retain any changes you make to this notebook, you should save a copy of the notebook to your Google Drive. This can be done by clicking the *Copy to Drive* button or selecting *File > Save a copy in Drive*. The notebook will be saved to the *Colab Notebooks* folder in your Google Drive. Once the saved copy pops up, close the original file and use the copy for the rest of the workshop. Feel free to rename the copy if desired. Any changes you make to your personal copy will automatically be saved.
+1. Click on the [**Open in Colab**]{{ page.colab_popup }} button above. The Google Colab interface will open in a new tab.
+2. If you are not already signed into your Google account, click on ***Sign In*** in the upper-right and sign in with your Google credentials. **You must be signed in with a Google account to be able to run notebooks in Google Colab.**
+3. **Optional:** To retain any changes you make to this notebook, save a copy of the notebook to your Google Drive by clicking the ***Copy to Drive*** button or selecting ***File > Save a copy in Drive***. This will save the notebook to the `Colab Notebooks` directory in your Google Drive. Once the saved copy pops up, close the original notebook and use the copy going forward. Feel free to rename the copy if desired. Any changes made to your personal copy will be automatically saved.
 
 *You might also see a message warning you that this notebook was not authored by Google and hence might contain malicious code. You can trust Data Lab notebooks, so click __Run Anyway__. But when running other third-party notebooks, you should review the code beforehand.*
 
 ---
-## Running the Notebook Locally on your Computer {#local}
-[![Download Notebook](https://tuftsdatalab.github.io/badges/jupyter.svg)](https://cdn.jsdelivr.net/gh/tuftsdatalab/intro-numpy@main/intro-numpy.ipynb)
+## Running the Workshop Notebook using a Local Anaconda Installation {#anaconda}
 
-The following assumes that you have [Anaconda](https://www.anaconda.com/products/individual){:target="_blank"} installed on your computer along with [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/){:target="_blank"}, [NumPy](https://numpy.org/){:target="_blank"}, and [Matplotlib](https://matplotlib.org/){:target="_blank"}. These packages are all included in Anaconda by default, so there is no need to individually install them if you have an unmodified Anaconda installation.
+{{ page.notebook_button }}
 
-Anaconda installation instructions: [docs.anaconda.com/anaconda/install](https://docs.anaconda.com/anaconda/install/){:target="_blank"}
+1. Click on the [**Download Notebook**][notebook-link] button above to download the workshop notebook.
+2. Create a designated directory for this workshop and move the downloaded `{{ site.file }}` notebook there.
+3. Launch **Anaconda Navigator** via the Start Menu (*Windows*) or from Applications (*macOS*).
+    - **Windows**: *Start > Anaconda3 > Anaconda Navigator*
+    - **macOS**: *Applications > Anaconda Navigator*
+4. Launch **JupyterLab** using the corresponding ***Launch*** button.
+5. JupyterLab will launch in a web browser. (A new tab will be generated if a browser is already open.)
+6. Within the JupyterLab file explorer on the left, navigate to the directory containing the `{{ site.file }}` notebook.
+7. Once you are in the correct directory, *double-click* on `{{ site.file }}` in the file browser to open the workshop notebook.
 
-1. Click on the [**Download Notebook**](https://cdn.jsdelivr.net/gh/tuftsdatalab/intro-python@master/intro-python.ipynb) button above to download the workshop notebook. It is recommended you create a designated folder for this workshop and move the notebook there.
-2. Launch JupyterLab either from the **command line** or via **Anaconda Navigator**.
-    - From the **command line**:
-        1. Launch **Terminal** (*macOS/Linux*) or the **Anaconda PowerShell Prompt** (*Windows*).
-            - **Windows**: *Start > Anaconda3 > Anaconda PowerShell Prompt*
-            - **macOS**: *Applications > Utilities > Terminal*
-        2. Type `jupyter lab` and press **Enter/Return**.
-    - Using **Anaconda Navigator**:
-        1. Launch Anaconda Navigator via the Start Menu (*Windows*) or from Applications (*macOS*).
-            - **Windows**: *Start > Anaconda3 > Anaconda Navigator*
-            - **macOS**: *Applications > Utilities > Terminal*
-        2. Launch **JupyterLab** using the corresponding *Launch* button.
-3. JupyterLab will open in a web browser. (A new tab will be generated if a browser is already open.)
-4. Within the JupyterLab file explorer on the left, navigate to the location of the downloaded **intro-python.ipynb** notebook.
-5. Once you are in the correct directory, *double-click* on **intro-python.ipynb** in the file browser to open the workshop notebook.
+---
+## Running the Workshop Notebook using a Local Mambaforge Installation {#mambaforge}
+
+{{ page.zipball_button }}&nbsp;
+{{ page.tarball_button }}
+
+1. Launch **Terminal** (*macOS/Linux*) or **Mambaforge Prompt** (*Windows*).
+    - **Windows**: *Start > Mambaforge > Mambaforge Prompt*
+    - **macOS**: *Applications > Utilities > Terminal*
+2. Run the following commands by typing or pasting the command into the console and then pressing <kbd>Enter</kbd> or <kbd>Return</kbd>.
+    - Download and extract the workshop materials:\
+      `curl -Lo - https://github.com/tuftsdatalab/{{ site.repo }}/archive/workshop.tar.gz | tar -xzf -`
+    - Navigate into the extracted directory: `cd {{ site.repo }}-workshop`
+    - Create a new environment for the workshop: `mamba env create -f environment.yml`
+    - Activate the workshop environment: `conda activate {{ site.env }}`
+    - Open the workshop notebook in JupyterLab: `jupyter lab {{ site.file }}`
+3. JupyterLab will launch in a web browser. (A new tab will be generated if a browser is already open.)
+4. If the workshop notebook does not automatically open, *double-click* on `{{ site.file }}` in the file browser on the left.
+5. **Do not close the console!** Closing the console will also terminate JupyterLab. Leave the console running in the background.
+
+
+[binder-link]: https://mybinder.org/v2/gh/tuftsdatalab/{{ site.repo }}/binder?urlpath=lab/tree/{{ site.file }}
+[colab-link]: https://colab.research.google.com/github/tuftsdatalab/{{ site.repo }}/blob/workshop/{{ site.file }}
+[notebook-link]: https://cdn.jsdelivr.net/gh/tuftsdatalab/{{ site.repo }}@workshop/{{ site.file }}
+[repo-link]: https://github.com/tuftsdatalab/{{ site.repo }}
+[zipball-link]: https://github.com/tuftsdatalab/{{ site.repo }}/archive/workshop.zip
+[tarball-link]: https://github.com/tuftsdatalab/{{ site.repo }}/archive/workshop.tar.gz
+[last-updated-badge]: https://img.shields.io/github/last-commit/tuftsdatalab/{{ site.repo }}?label=last%20updated
