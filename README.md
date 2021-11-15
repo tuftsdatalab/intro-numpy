@@ -14,7 +14,7 @@ Source repository for the [Tufts University Data Lab][datalab-website-link] work
 
 [workshop-webiste-link]: https://tuftsdatalab.github.io/intro-numpy/
 [datalab-website-link]: https://sites.tufts.edu/datalab/
-[develop-launch-link]: https://mybinder.org/v2/gh/tuftsdatalab/intro-numpy/develop?urlpath=lab/tree/intro-numpy.ipynb
+[develop-launch-link]: https://mybinder.org/v2/gh/tuftsdatalab/intro-numpy/develop
 
 [workshop-webiste-badge]: https://img.shields.io/website?label=workshop%20webiste&url=https://tuftsdatalab.github.io/intro-numpy/
 [mirror-content-badge]: https://img.shields.io/github/workflow/status/tuftsdatalab/intro-numpy/mirror-content?label=mirror%20content
