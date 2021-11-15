@@ -1,2 +1,7 @@
 title: Scientific Computing with Python using NumPy
 description: A Tufts University Data Lab Workshop
+repo: intro-numpy
+author: Uku-Kaspar Uustalu
+slides: numpy-slides
+file: intro-numpy.ipynb
+env: intro-numpy
